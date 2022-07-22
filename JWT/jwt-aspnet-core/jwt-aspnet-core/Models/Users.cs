@@ -1,4 +1,6 @@
-﻿namespace jwt_aspnet_core.Models;
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace jwt_aspnet_core.Models;
 
 public class Users
 {

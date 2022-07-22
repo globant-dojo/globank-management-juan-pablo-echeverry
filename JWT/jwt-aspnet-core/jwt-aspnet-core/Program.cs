@@ -1,7 +1,7 @@
+using jwt_aspnet_core.ActionsFilters;
 using jwt_aspnet_core.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -11,6 +11,8 @@ builder.Services.AddSwaggerGen();
 
 //Fist authentication method
 builder.Services.AddTokenAuthentication(builder.Configuration);
+
+builder.Services.AddScoped<ValidationFilerAttribute>();
 
 //Second Authentication method
 //builder.Services.AddJWTTokenServices(builder.Configuration);
